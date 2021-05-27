@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100;900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+body {}
+h1, h2, h3, h4, h5 {
+	font-family: 'Nunito', sans-serif;
+}
+h1 {
+	font-size: 1.75rem;
+}
+p {
+	font-size: 1.25rem;
+}
+#margin {
+	height: 10vh;
+}
+header nav {
+	position: fixed;
+	top: 0;
+	height: 8vh;
+	width: 100%;
+	background-color: hsla(0, 0%, 0%, 0.7);
+	z-index: 100;
+}
+header nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+header nav ul li {
+	padding-top: calc(1vw);
+}
+header nav ul a {
+	text-decoration: none;
+}
+section {
+	height: 100vh;
+}
+#home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: url("stars.jpg") no-repeat;
+	background-size: cover;
+	color: white;
+}
+#home h1 {
+	align-self: center;
+	font-size: 3.5rem;
+	font-weight: 900;
+}
+#home h1, button {
+	text-transform: uppercase;
+}
+button {
+	align-self: center;
+	font-size: 1rem;
+	padding: 10px;
+	margin-top: 2rem;
+}
+button a {
+	text-decoration: none;
+	font-weight: 100;
+}
+.padding {
+	padding: 2rem;
+}
+#about {
+	position: relative;
+}
+#about img {
+	border: #D6D4DB solid 2px;
+	border-radius: 50%;
+	position: absolute;
+	left: 45vw;
+	top: 20vh;
+	z-index: 100;
+}
+#about .dark-bg {
+	height: 30vh;
+	width: 100%;
+	background-color: #160057;
+}
+#about p {
+	line-height: 1.4;
+	word-spacing: 1.1;
+	padding-bottom: 1rem;
+}
+#about ul li {
+	line-height: 2;
+}
+#about ul li a, :active, #about ul li a:active, #about ul li a:focus {
+	color: #160057;
+}
+#about ul li a:hover {
+	color: #5D7EF0;
+}
+.social-media {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+#contact {
+	height: 100%;
+}
+#contact .fab, #contact .fas {
+	font-size: 2rem;
+	letter-spacing: 2;
+	color: #5D7EF0;
+	padding: 2rem 1rem 0 0;
+}
+#contact .fab:hover, #contact .fas:hover {
+	color: #559FFF;
+}
+nav ul li {
+	display: flex;
+	flex-direction: row;
+}
+ul li {
+	list-style-type: none;
+	align-self: center;
+}
+ul li a {
+	color: #B67DFF;
+}
+ul li a:hover {
+	color: #5D7EF0;
+}
+footer {
+	display: flex;
+	justify-content: center;
+}
