@@ -105,9 +105,7 @@ button a {
 	flex-direction: row;
 	justify-content: flex-start;
 }
-#contact {
-	height: 100%;
-}
+
 #contact .fab, #contact .fas {
 	font-size: 2rem;
 	letter-spacing: 2;
