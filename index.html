@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LifeOSX - Your life, reimagined.">
+    <title>LifeOSX - Your Life, Reimagined</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="#top" class="logo">
+                <img src="LifeOSX_logo.svg" alt="LifeOSX Logo" width="60%">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
+                <a href="https://www.kickstarter.com/profile/lifeosx/about" target="_blank" class="btn btn-primary">Kickstarter</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="top">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Your life, reimagined.</h1>
+            <p class="hero-subtitle">LifeOSX brings your goals, tasks, and tools together, adapting to your unique rhythm.</p>
+
+            <div class="hero-badges">
+                <span class="badge">
+                    <svg class="badge-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#87EEAB" fill-opacity="0.2"/>
+                        <path d="M14.6668 6.5L8.25016 12.9167L5.3335 10" stroke="#87EEAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Effortless
+                </span>
+                <span class="badge">
+                    <svg class="badge-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#87EEAB" fill-opacity="0.2"/>
+                        <path d="M14.6668 6.5L8.25016 12.9167L5.3335 10" stroke="#87EEAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Privacy-focused
+                </span>
+                <span class="badge">
+                    <svg class="badge-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#87EEAB" fill-opacity="0.2"/>
+                        <path d="M14.6668 6.5L8.25016 12.9167L5.3335 10" stroke="#87EEAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Productivity booster
+                </span>
+            </div>
+
+            <div class="hero-cta">
+                <form class="hero-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-join-waitlist">Join Waitlist</button>
+                </form>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card">
+                <div class="hero-card-content">
+                    <p>Join our Kickstarter campaign and get exclusive early adopter benefits</p>
+                    <div class="countdown-container">
+                        <p>Campaign ends in:</p>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="countdown-days">29</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="countdown-hours">22</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="countdown-minutes">57</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="countdown-seconds">00</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="window.open('https://www.kickstarter.com/profile/lifeosx/about', '_blank')" class="btn btn-accent">Support on Kickstarter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none">
+            <path fill="#ffffff" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,128C672,128,768,96,864,80C960,64,1056,64,1152,74.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+</section>
+
+<div class="footer-bottom">
+    <p>&copy; 2023 LifeOSX. All rights reserved.</p>
+    <p style="margin-bottom: 30px;">This is a crowdfunding campaign. LifeOSX is currently in development.</p>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
