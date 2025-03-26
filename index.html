@@ -24,7 +24,6 @@
                 <li><a href="#roadmap">Roadmap</a></li>
             </ul>
             <div class="header-actions">
-                <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
                 <a href="https://www.kickstarter.com/profile/lifeosx/about" target="_blank" class="btn btn-primary">Kickstarter</a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle Menu">
@@ -67,10 +66,12 @@
             </div>
 
             <div class="hero-cta">
-                <form class="hero-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn-join-waitlist">Join Waitlist</button>
+                <form id="waitlist-form" class="hero-form">
+                    <input type="email" name="emailAddress" placeholder="Enter your email" required id="email-input">
+                    <button type="submit" id="submit-button" class="btn btn-join-waitlist">Join Waitlist</button>
                 </form>
+
+                <p id="form-status" class="form-status"></p>
             </div>
         </div>
         <div class="hero-visual">
@@ -104,8 +105,8 @@
         </div>
     </div>
     <div class="hero-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none">
-            <path fill="#ffffff" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,128C672,128,768,96,864,80C960,64,1056,64,1152,74.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,149.3C672,128,768,96,864,80C960,64,1056,64,1152,74.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
     </div>
 </section>
@@ -115,6 +116,24 @@
     <p style="margin-bottom: 30px;">This is a crowdfunding campaign. LifeOSX is currently in development.</p>
 </div>
 
+<!-- Name Input -->
+<div id="name-overlay">
+    <div class="name-popup">
+        <h3>Almost Done</h3>
+        <p>What's your name? We'd love to personalize your experience!</p>
+        <input type="text" id="popup-name-input" placeholder="Your name">
+        <div class="buttons">
+            <button type="button" id="continue-button" class="btn btn-accent">Join Waitlist</button>
+        </div>
+    </div>
+</div>
+
 <script src="scripts.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("Prr_jnDigwS9iFzd-");
+    })();
+</script>
 </body>
 </html>
