@@ -50,42 +50,37 @@ document.addEventListener('DOMContentLoaded', function() {
     function hideNamePopup() {
         nameOverlay.style.display = "none";
     }
-    // Submit the form using a different approach - JSONP via script tag
+
+    // Submit the form function
     function submitFormWithName(name = "") {
         submitButton.disabled = true;
         submitButton.textContent = "Sending...";
         const userEmail = emailInput.value;
-        // Method 1: Try using XMLHttpRequest with CORS
-        const xhr = new XMLHttpRequest();
-        // Construct URL with parameters
-        let url = `${WEBAPP_URL}?email=${encodeURIComponent(userEmail)}`;
-        if (name) {
-            url += `&name=${encodeURIComponent(name)}`;
-        }
-        xhr.open('GET', url, true);
-        // Handle completion - successful or not
-        xhr.onload = function() {
-            console.log("XHR completed with status:", xhr.status);
 
-            // Send welcome email via EmailJS
+        console.log("Submitting waitlist form for:", userEmail);
+
+        // Direct URL request with image
+        const img = document.createElement('img');
+        img.width = 1;
+        img.height = 1;
+        img.src = WEBAPP_URL +
+            "?email=" + encodeURIComponent(userEmail) +
+            "&name=" + encodeURIComponent(name) +
+            "&timestamp=" + new Date().getTime();
+        img.style.display = 'none';
+        document.body.appendChild(img);
+
+        // Always assume success after timeout
+        setTimeout(function() {
+            // Send welcome email
             sendWelcomeEmail(name, userEmail);
 
+            // Update UI
             handleSuccessfulSubmission(userEmail, name);
-        };
-        // Handle network errors
-        xhr.onerror = function() {
-            console.log("XHR encountered an error - trying backup method");
-            // Backup method - iframe approach
-            tryIframeSubmission(userEmail, name);
-        };
-        // Send the request
-        try {
-            xhr.send();
-        } catch (error) {
-            console.error("XHR send error:", error);
-            // Try backup method
-            tryIframeSubmission(userEmail, name);
-        }
+
+            // Remove the image
+            document.body.removeChild(img);
+        }, 2000);
     }
 
     // EmailJS function to send welcome email
@@ -134,63 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // Backup submission method using iframe
-    function tryIframeSubmission(userEmail, name) {
-        // Create a hidden iframe
-        const iframe = document.createElement('iframe');
-        iframe.name = 'hidden_submit_iframe';
-        iframe.id = 'hidden_submit_iframe';
-        iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-        // Create a form targeting the iframe
-        const hiddenForm = document.createElement('form');
-        hiddenForm.method = 'POST';
-        hiddenForm.action = WEBAPP_URL;
-        hiddenForm.target = 'hidden_submit_iframe';
-        hiddenForm.style.display = 'none';
-        // Create email input
-        const emailField = document.createElement('input');
-        emailField.type = 'text';
-        emailField.name = 'email';
-        emailField.value = userEmail;
-        hiddenForm.appendChild(emailField);
-        // Add name if provided
-        if (name) {
-            const nameField = document.createElement('input');
-            nameField.type = 'text';
-            nameField.name = 'name';
-            nameField.value = name;
-            hiddenForm.appendChild(nameField);
-        }
-        // Append form to body
-        document.body.appendChild(hiddenForm);
-        // Set up a timeout to mark as success even if no response
-        setTimeout(function() {
-            // Send welcome email via EmailJS
-            sendWelcomeEmail(name, userEmail);
-
-            handleSuccessfulSubmission(userEmail, name);
-            // Clean up
-            try {
-                if (document.body.contains(hiddenForm)) {
-                    document.body.removeChild(hiddenForm);
-                }
-                if (document.body.contains(iframe)) {
-                    document.body.removeChild(iframe);
-                }
-            } catch (err) {
-                console.error("Error during cleanup:", err);
-            }
-        }, 2000);
-        // Submit the form
-        try {
-            hiddenForm.submit();
-        } catch (err) {
-            console.error("Error submitting form:", err);
-            sendWelcomeEmail(name, userEmail);
-            handleSuccessfulSubmission(userEmail, name);
-        }
-    }
     // Common function to handle successful submission
     function handleSuccessfulSubmission(userEmail, name) {
         // Save to localStorage
@@ -209,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         heroCta.classList.add('already-joined');
         emailInput.setAttribute('readonly', true);
     }
+
     // Handle "Continue" button click
     if (continueButton) {
         continueButton.addEventListener("click", function() {
@@ -219,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Continue button not found in the DOM");
     }
+
     // Close popup when clicking outside
     if (nameOverlay) {
         nameOverlay.addEventListener("click", function(e) {
@@ -239,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Name overlay not found in the DOM");
     }
+
     // Handle form submission
     if (form) {
         form.addEventListener("submit", function(event) {
@@ -261,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Form not found in the DOM");
     }
+
     // ===== COUNTDOWN TIMER FUNCTIONALITY =====
     // Set the target date: 52 days from March 25, 2025
     const startDate = new Date(2025, 2, 25); // March 25, 2025 (Month is 0-indexed)
