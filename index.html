@@ -8,8 +8,7 @@
     <title>LifeOSX - Life Operating System Xpert | Your Life, Reimagined</title>
     <meta name="description" content="LifeOSX: The ultimate AI-powered Life Operating System for high performers. Revolutionize productivity, personal development, and life management with cutting-edge technology.">
 
-    <!-- Extended Keyword Metadata -->
-    <meta name="keywords" content="LifeOS, Life Operating System, LifeOSX, AI productivity, personal operating system, LifeOS dashboard, Notion LifeOS, Obsidian LifeOS, second brain system, productivity planner, life management, AI-powered life optimization, entrepreneurial productivity, personal development OS">
+    <!-- Remove meta keywords tag as it's not used by search engines -->
 
     <!-- Robots and Indexing -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -31,13 +30,17 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://lifeosx.com">
 
-    <!-- Existing Font and Style Links -->
+    <!-- Performance Optimizations -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+
+    <!-- Font and Style Links -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Structured Data Schema -->
+    <!-- Structured Data Schema with expanded FAQ markup -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -57,15 +60,13 @@
                 "@type": "Organization",
                 "name": "LifeOSX",
                 "foundingDate": "2025",
-                "description": "Innovating personal productivity through AI life management"
+                "description": "Innovating personal productivity through AI life management",
+                "logo": "https://lifeosx.com/LifeOSX_logo.svg"
             },
-            "keywords": [
-                "LifeOS",
-                "Life Operating System",
-                "AI productivity",
-                "personal operating system",
-                "second brain"
-            ],
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://lifeosx.com"
+            },
             "image": "https://lifeosx.com/LifeOSX_logo.svg",
             "sameAs": [
                 "https://www.linkedin.com/company/lifeosx",
