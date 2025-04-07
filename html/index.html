@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO Metadata -->
-    <title>LifeOSX - Life Operating System Xpert | Your Life, Reimagined</title>
-    <meta name="description" content="LifeOSX: The ultimate AI-powered Life Operating System for high performers. Revolutionize productivity, personal development, and life management with cutting-edge technology.">
+    <title>LifeOSX: Design a Life You Love </title>
+    <meta name="description" content="Design and optimize your life with LifeOSX - a personal operating system to help you build better habits, achieve goals, and live intentionally.">
 
     <!-- Remove meta keywords tag as it's not used by search engines -->
 
@@ -31,11 +31,11 @@
     <link rel="canonical" href="https://lifeosx.com">
 
     <!-- Performance Optimizations -->
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="../css/main.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
 
     <!-- Font and Style Links -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -47,7 +47,7 @@
             "@type": "WebApplication",
             "name": "LifeOSX",
             "url": "https://lifeosx.com",
-            "description": "Life Operating System Xpert - An AI-powered platform for ultimate life management, productivity and personal development",
+            "description": "Design and optimize your life with LifeOSX - a personal operating system to help you build better habits, achieve goals, and live intentionally.",
             "applicationCategory": "Productivity",
             "operatingSystem": "Web",
             "offers": {
@@ -60,7 +60,7 @@
                 "@type": "Organization",
                 "name": "LifeOSX",
                 "foundingDate": "2025",
-                "description": "Innovating personal productivity through AI life management",
+                "description": "Design and optimize your life with LifeOSX - a personal operating system to help you build better habits, achieve goals, and live intentionally.",
                 "logo": "https://lifeosx.com/LifeOSX_logo.svg"
             },
             "mainEntityOfPage": {
@@ -79,14 +79,15 @@
 <header class="header">
     <div class="container">
         <nav class="navbar">
-            <a href="#top" class="logo">
-                <img src="LifeOSX_logo.svg" alt="LifeOSX Logo" width="60%">
+            <a href="index.html" class="logo">
+                <img src="../LifeOSX_logo.svg" alt="LifeOSX Logo" width="60%" loading="lazy">
             </a>
             <ul class="nav-links">
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
             <div class="header-actions">
                 <a href="https://www.kickstarter.com/profile/lifeosx/about" target="_blank" class="btn btn-primary">Kickstarter</a>
@@ -144,7 +145,7 @@
                 <div class="hero-card-content">
                     <p>Join our Kickstarter campaign and get exclusive early adopter benefits</p>
                     <div class="countdown-container">
-                        <p>Campaign ends in:</p>
+                        <p>Campaign starts in:</p>
                         <div class="countdown">
                             <div class="countdown-item">
                                 <span class="countdown-number" id="countdown-days">29</span>
@@ -171,15 +172,53 @@
     </div>
     <div class="hero-wave">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
-            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,149.3C672,128,768,96,864,80C960,64,1056,64,1152,74.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            <path fill="#242538" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,149.3C672,128,768,96,864,80C960,64,1056,64,1152,74.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
     </div>
 </section>
 
-<div class="footer-bottom">
-    <p>&copy; 2023 LifeOSX. All rights reserved.</p>
-    <p style="margin-bottom: 30px;">This is a crowdfunding campaign. LifeOSX is currently in development.</p>
-</div>
+<!-- Enhanced Footer Structure -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Company -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="approach.html">Our Approach</a></li>
+                        <li><a href="vision.html">Vision & Mission</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Learn More -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Learn More</h4>
+                    <ul class="footer-links">
+                        <li><a href="why.html">Why LifeOSX?</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="footer-column footer-contact">
+                    <h4 class="footer-heading">Connect</h4>
+                    <p class="footer-description">
+                        Have questions about LifeOSX? We're here to help.
+                    </p>
+                    <a href="mailto:hello@lifeosx.com" class="footer-email">hello@lifeosx.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 LifeOSX. All rights reserved.</p>
+        <p>This is a crowdfunding campaign. LifeOSX is currently in development.</p>
+    </div>
+</footer>
 
 <!-- Name Input -->
 <div id="name-overlay">
@@ -193,7 +232,7 @@
     </div>
 </div>
 
-<script src="scripts.js"></script>
+<script src="../scripts/scripts.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
     (function(){
