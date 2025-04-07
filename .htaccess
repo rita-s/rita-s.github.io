@@ -4,14 +4,14 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Remove .html extension
+# Remove .html extension for clean URLs
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
 # Redirect .html to clean URLs
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /html/([^.]+)\.html\ HTTP
-RewriteRule ^html/([^.]+)\.html$ /$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html\s [NC]
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
 
 # Redirects for main pages
 Redirect 301 /html/about.html /about
@@ -21,11 +21,10 @@ Redirect 301 /html/approach.html /our-approach
 Redirect 301 /html/privacy.html /privacy-policy
 Redirect 301 /html/terms.html /terms
 
-# Blog category and article redirects
+# Blog category and article redirects (example for 'core-philosophy')
 RewriteRule ^blog/core-philosophy/category-core-philosophy$ /blog/categories/core-philosophy/category-core-philosophy.html [L]
 RewriteRule ^blog/core-philosophy/([^/]+)$ /blog/categories/core-philosophy/$1.html [L]
 
-# Similar rules for other blog categories...
 
 # Enable GZIP compression
 <IfModule mod_deflate.c>
