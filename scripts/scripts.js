@@ -205,9 +205,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== COUNTDOWN TIMER FUNCTIONALITY =====
     // Set the target date: 52 days from March 25, 2025
-    const startDate = new Date(2025, 2, 21); // March 21, 2025 (Month is 0-indexed)
+    const startDate = new Date(2025, 9, 01); // March 21, 2025 (Month is 0-indexed)
     const targetDate = new Date(startDate);
-    targetDate.setDate(startDate.getDate() + 52);
+    targetDate.setDate(startDate.getDate() + 40);
     // Elements
     const daysElement = document.getElementById('countdown-days');
     const hoursElement = document.getElementById('countdown-hours');
