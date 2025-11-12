@@ -109,7 +109,7 @@ a { text-decoration:none; color: var(--primary-color); }
 
 /* ===== HERO (Desktop/Default) ===== */
 .hero { 
-    flex:1; 
+    flex: 1 0 auto;
     display:flex; 
     align-items:center; 
     justify-content: center;
@@ -215,6 +215,7 @@ a { text-decoration:none; color: var(--primary-color); }
 
 /* ===== FOOTER ===== */
 .footer {
+    flex-shrink: 0;
     background-color: var(--white);
     padding:2rem 0;
     text-align:center;
