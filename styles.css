@@ -108,12 +108,12 @@ a { text-decoration:none; color: var(--primary-color); }
 }
 
 /* ===== HERO (Desktop/Default) ===== */
-.hero {
-    flex:1;
-    display:flex;
-    align-items:center;
+.hero { 
+    flex:1; 
+    display:flex; 
+    align-items:center; 
     justify-content: center;
-    padding:3rem 0;
+    padding:3rem 0; 
 }
 
 .hero-container {
@@ -127,24 +127,24 @@ a { text-decoration:none; color: var(--primary-color); }
     margin: 0 auto;
 }
 
-.hero-content {
-    flex:1 1 400px;
-    max-width:600px;
-    display:flex;
-    flex-direction:column;
+.hero-content { 
+    flex:1 1 400px; 
+    max-width:600px; 
+    display:flex; 
+    flex-direction:column; 
 }
 
-.hero-title {
-    font-family:'Recline', sans-serif;
-    font-size:3.5rem;
-    margin-bottom:1rem;
-    line-height:1.1;
+.hero-title { 
+    font-family:'Recline', sans-serif; 
+    font-size:3.5rem; 
+    margin-bottom:1rem; 
+    line-height:1.1; 
 }
 
-.hero-subtitle {
-    font-size:1.25rem;
-    margin-bottom:2rem;
-    color: var(--dark-gray);
+.hero-subtitle { 
+    font-size:1.25rem; 
+    margin-bottom:2rem; 
+    color: var(--dark-gray); 
 }
 
 /* ===== GRID WRAPPER ===== */
@@ -156,24 +156,24 @@ a { text-decoration:none; color: var(--primary-color); }
 }
 
 /* ===== BADGES ===== */
-.hero-badges {
-    display:flex;
-    flex-wrap:wrap;
-    gap:0.5rem;
+.hero-badges { 
+    display:flex; 
+    flex-wrap:wrap; 
+    gap:0.5rem; 
 }
 
-.badge {
-    background: var(--black);
-    color: var(--white);
-    font-size:0.85rem;
-    padding:0.35rem 0.75rem;
-    border-radius:4px;
+.badge { 
+    background: var(--black); 
+    color: var(--white); 
+    font-size:0.85rem; 
+    padding:0.35rem 0.75rem; 
+    border-radius:4px; 
 }
 
 /* ===== FORM ===== */
-.hero-form-inline {
-    display:flex;
-    width:100%;
+.hero-form-inline { 
+    display:flex; 
+    width:100%; 
 }
 
 .hero-form-inline input {
@@ -201,16 +201,16 @@ a { text-decoration:none; color: var(--primary-color); }
 .btn-join-waitlist:hover { background-color:#333; }
 
 /* ===== BOOK VISUAL ===== */
-.hero-visual {
-    flex:1 1 400px;
-    text-align:center;
+.hero-visual { 
+    flex:1 1 400px; 
+    text-align:center; 
 }
 
-.book-cover {
-    width:100%;
-    max-width:350px;
-    border-radius:6px;
-    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+.book-cover { 
+    width:100%; 
+    max-width:350px; 
+    border-radius:6px; 
+    box-shadow:0 15px 30px rgba(0,0,0,0.3); 
 }
 
 /* ===== FOOTER ===== */
@@ -245,7 +245,7 @@ a { text-decoration:none; color: var(--primary-color); }
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 0.5rem;
+        gap: 0.2rem;
         width: 90%;
         max-width: 540px;
         margin: 0 auto;
@@ -341,7 +341,7 @@ a { text-decoration:none; color: var(--primary-color); }
     }
 
     .hero-container {
-        gap: 0.15rem;
+        gap: 0;
         width: 88%;
         max-width: 400px;
         margin: 0 auto;
@@ -422,7 +422,7 @@ a { text-decoration:none; color: var(--primary-color); }
     }
 
     .hero-container {
-        gap: 0.1rem;
+        gap: 0;
         width: 86%;
         max-width: 340px;
         margin: 0 auto;
