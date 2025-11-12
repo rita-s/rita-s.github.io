@@ -3,19 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Code of Reality - Rita Anstey</title>
+  <title>The Code of Reality - Minimalist Landing</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Recline:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Header Navigation Styles */
+    .header {
+      background-color: var(--white);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-family: 'Recline', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu a {
+      color: var(--dark-gray);
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: var(--black);
+    }
+
+    .nav-menu a.active {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--black);
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <div class="page-wrapper">
+  <!-- Header Navigation -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">The Code of Reality</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
   <section class="hero">
-    <div class="container hero-container">
+    <div class="hero-container">
 
       <!-- Text Column -->
       <div class="hero-content">
@@ -30,20 +139,18 @@
             <span class="badge">Manifestation</span>
           </div>
 
-          <form 
-    id="waitlist-form" 
-    class="hero-form-inline" 
-    action="https://getlaunchlist.com/s/gDA8HJ" 
-    method="POST"
->
-  <input type="email" name="email" placeholder="Enter your email" required>
-  
-  <input type="hidden" name="redirect_url" value="https://twojastrona.pl/dziekujemy"> 
-  
-  <button type="submit" class="btn btn-join-waitlist">Join Waitlist</button>
-</form>
+          <form
+                  id="waitlist-form"
+                  class="hero-form-inline"
+                  action="https://getlaunchlist.com/s/gDA8HJ"
+                  method="POST"
+          >
+            <input type="email" name="email" placeholder="Enter your email" required>
 
-          
+            <input type="hidden" name="redirect_url" value="https://twojastrona.pl/dziekujemy">
+
+            <button type="submit" class="btn btn-join-waitlist">Join Waitlist</button>
+          </form>
         </div>
       </div>
 
