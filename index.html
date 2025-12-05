@@ -1,174 +1,336 @@
+<!-- ===== index.html ===== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Code of Reality - Minimalist Landing</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Recline:wght@700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Header Navigation Styles */
-    .header {
-      background-color: var(--white);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-
-    .logo {
-      font-family: 'Recline', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--black);
-    }
-
-    .nav-menu {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-menu a {
-      color: var(--dark-gray);
-      font-weight: 400;
-      transition: color 0.3s;
-    }
-
-    .nav-menu a:hover {
-      color: var(--black);
-    }
-
-    .nav-menu a.active {
-      color: var(--black);
-      font-weight: 500;
-    }
-
-    /* Mobile Menu */
-    .mobile-menu-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .mobile-menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background-color: var(--black);
-      transition: 0.3s;
-    }
-
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--white);
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      }
-
-      .nav-menu.active {
-        display: flex;
-      }
-
-      .mobile-menu-toggle {
-        display: flex;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Code of Reality – Waitlist</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<div class="page-wrapper">
-  <!-- Header Navigation -->
-  <header class="header">
-    <!-- <nav class="nav-container">
-      <a href="index.html" class="logo">The Code of Reality</a>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="store.html">Store</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav> -->
-  </header>
-
-  <section class="hero">
-    <div class="hero-container">
-
-      <!-- Text Column -->
-      <div class="hero-content">
-        <h1 class="hero-title">The Code of Reality</h1>
-        <p class="hero-subtitle">Discover the hidden patterns shaping the universe and your life.</p>
-
-        <!-- Grid wrapper for badges + form -->
-        <div class="hero-grid">
-          <div class="hero-badges">
-            <span class="badge">Consciousness</span>
-            <span class="badge">Hidden Patterns</span>
-            <span class="badge">Manifestation</span>
-          </div>
+<div class="page">
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="waitlist">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1>Become the person who already has the life you want.</h1>
+          <p class="hero-sub">
+            The 4-part system that works (even when everything else failed).
+          </p>
 
           <form
-                  id="waitlist-form"
-                  class="hero-form-inline"
+                  class="hero-form"
                   action="https://getlaunchlist.com/s/gDA8HJ"
                   method="POST"
           >
-            <input type="email" name="email" placeholder="Enter your email" required>
-
-            <input type="hidden" name="redirect_url" value="https://twojastrona.pl/dziekujemy">
-
-            <button type="submit" class="btn btn-join-waitlist">Join Waitlist</button>
+            <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Enter your email"
+            />
+            <input
+                    type="hidden"
+                    name="redirect_url"
+                    value="https://twojastrona.pl/dziekujemy"
+            />
+            <button type="submit">Join waitlist</button>
           </form>
+
+          <p class="hero-note">
+            No payment. No spam. Unsubscribe anytime.<br /><br />
+            Join the waitlist, share with friends—exclusive launch bonuses and prizes for top 3!
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="cover-glow"></div>
+          <div class="cover-wrapper">
+            <img src="cover.jpg" alt="The Code of Reality book cover" />
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Book Visual -->
-      <div class="hero-visual">
-        <img src="cover.jpg" alt="The Code of Reality" class="book-cover">
+    <!-- AUTHOR -->
+    <section class="section" id="author">
+      <div class="section-header"></div>
+
+      <div class="glass-card">
+        <div class="author-grid">
+          <!-- LEFT: main bio -->
+          <div>
+            <p class="eyebrow">Author</p>
+            <h3 class="author-name">Hi, I'm Rita Anstey</h3>
+
+            <div class="author-text">
+              <div class="author-photo">
+                <img src="images/Photo.jpg" alt="Rita Anstey" />
+              </div>
+
+              <p>
+                I help people who've tried everything—therapy, meditation, vision boards,
+                affirmations—and still feel like something invisible is blocking them.
+              </p>
+              <p>
+                For 18 years, one obsession has kept me going:
+                <strong>why do some people get the life they want while others stay
+                  stuck, no matter how hard they work on themselves?</strong>
+              </p>
+              <p>
+                The answer has nothing to do with "positive thinking" or forcing yourself
+                to visualise harder. It's about <strong>coherence</strong>:
+                when the body, emotions and thoughts finally say the same thing,
+                reality starts to shift.
+              </p>
+              <p>
+                I have a BSc in Psychology and am a member of the British Psychological Society.
+                I trained for six years in body psychotherapy in the UK, coaching in Poland,
+                Peak State Trauma Therapy in the United States, and completed 500-hour yoga
+                teacher training in India.
+              </p>
+              <p>
+                For years I've been integrating Western psychology, body-based work and
+                contemplative practices into a single system.
+                <strong>The Code of Reality</strong> is the book I needed 18 years ago—
+                when nothing worked and it was clear the problem wasn’t that I “didn’t believe enough”.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: why this works -->
+          <div>
+            <p class="eyebrow">Why this works</p>
+            <h3 class="author-why-title">I spent 18 years testing every method so you don't have to</h3>
+
+            <div class="author-text">
+              <div class="author-side-block">
+                <div class="author-side-image--large">
+                  <img src="images/MMI.jpg" alt="Millionaire Mind Intensive with T. Harv Eker" />
+                </div>
+                <div class="author-side-caption">
+                  After <em>Millionaire Mind Intensive</em> with T. Harv Eker — one of the trainings
+                  that shaped how I think about identity, wealth and what’s actually possible.
+                </div>
+              </div>
+
+              <p>
+                I went through every training I could find. I kept investing in myself and still
+                wasn't "enough"—not spiritual enough, loving enough, successful enough, you name it.
+                Silent retreats, hypnosis, therapy, coaching, endless courses… and underneath it all,
+                a quiet belief that something in me was fundamentally broken.
+              </p>
+              <p>
+                I didn’t give up. Over time I saw that every approach had fundamental holes.
+                Psychotherapy often focuses on deficits and forgets about resources.
+                Coaching squeezes your strengths like a lemon without respecting your limits.
+                "Alignment" is thrown around everywhere, but almost nobody can explain
+                <em>how</em> to become aligned in a way your body actually understands.
+              </p>
+              <p>
+                Eventually I realised each method was only holding one piece of the puzzle.
+                The real power is in <strong>integrating</strong> them into one coherent process.
+                That’s what <strong>The Code of Reality</strong> finally does.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- THE SYSTEM -->
+    <section class="section" id="system">
+      <div class="system-intro">
+        <p class="eyebrow">The system</p>
+        <h2 class="system-title">Not magic. Method.</h2>
       </div>
 
-    </div>
-  </section>
+      <div class="system-grid">
+        <!-- 01: CLARITY -->
+        <article class="system-card">
+          <div class="system-num">01</div>
+          <h3 class="system-heading">Clarity</h3>
+          <p class="system-desc">
+            Before you "attract" anything, you need to know <em>who</em> the person is
+            who already has it. This isn't fantasy—it's discovering the version of you
+            that trauma and life circumstances covered up. When your identity becomes clear —
+            “I am the person who…” — your brain, nervous system and decisions start aligning
+            with that version.
+          </p>
+        </article>
 
+        <!-- 02: CONGRUENCE -->
+        <article class="system-card">
+          <div class="system-num">02</div>
+          <h3 class="system-heading">Congruence</h3>
+          <p class="system-desc">
+            You can repeat “I am abundant” all day.
+            If the body is still in survival mode, the body wins.
+            Congruence is the moment when thoughts, emotions and the nervous system say
+            the same thing. That’s why affirmations are too weak—they only touch the mind.
+            When congruence appears, you stop fighting yourself and energy stops leaking
+            into self-sabotage.
+          </p>
+        </article>
+
+        <!-- 03: IDENTITY -->
+        <article class="system-card">
+          <div class="system-num">03</div>
+          <h3 class="system-heading">Identity</h3>
+          <p class="system-desc">
+            Full manifestation is a paradox: you ask for something you don't yet have,
+            but you must first become the person who already has it.
+            Not “I want to be wealthy,” but “I am the person who creates wealth”—
+            and your body feels it. The same principle psychology uses for identity-based
+            habits—just applied to manifestation.
+          </p>
+        </article>
+
+        <!-- 04: ACTION -->
+        <article class="system-card">
+          <div class="system-num">04</div>
+          <h3 class="system-heading">Action</h3>
+          <p class="system-desc">
+            When identity, intention and state are aligned, action stops being
+            forced effort. Movement becomes a natural expression of who you are,
+            not an attempt to prove your worth.
+            This isn't about sitting on the couch “sending vibrations” —
+            it's about acting from calm certainty, without gripping the steering wheel in panic.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- LAUNCH BONUSES (3 COLUMNS, FULL WIDTH LIKE SYSTEM) -->
+    <section class="section" id="launch-bonuses">
+      <div class="system-intro">
+        <p class="eyebrow">Launch bonuses</p>
+        <h2 class="system-title">Three levels of bonuses. One waitlist.</h2>
+        <p class="system-desc">
+          Everyone gets something. The more you share, the more you unlock.
+        </p>
+      </div>
+
+      <div class="bonuses-grid">
+        <!-- TIER 1 -->
+        <article class="glass-card bonus-card">
+          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 1 — All Subscribers</h4>
+          <p class="system-desc" style="font-size:0.98rem;">
+            ✓ <strong>30% Early Bird Discount</strong><br>
+            Book at launch price minus 30%. Valid for 48 hours after launch.<br><br>
+
+            ✓ <strong>Chapter 1: “The Coherence Gap” (PDF)</strong><br>
+            Instant download so you can start reading right away.<br><br>
+
+            ✓ <strong>10-Minute “Coherence Reset” Audio Practice</strong><br>
+            Guided nervous system regulation you can use any time you feel blocked.<br><br>
+
+            ✓ <strong>“18 Years in 18 Pages” Behind-the-Scenes PDF</strong><br>
+            Key insights from what worked, what didn’t and why.
+          </p>
+        </article>
+
+        <!-- TIER 2 -->
+        <article class="glass-card bonus-card">
+          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 2 — Top 10 Referrers</h4>
+          <p class="system-desc" style="font-size:0.98rem;">
+            Everything from Tier 1, plus:<br><br>
+
+            ✓ <strong>Extended Preview: Chapters 1–3</strong><br>
+            First ~60 pages, two weeks before public launch.<br><br>
+
+            ✓ <strong>“Coherence Mapping” Workbook (PDF)</strong><br>
+            Step-by-step framework to apply the 4 elements to your own life.<br><br>
+
+            ✓ <strong>Private Launch Week Q&amp;A (Live on Zoom)</strong><br>
+            90-minute small-group call. Live teaching + questions. Recording included.<br><br>
+
+            ✓ <strong>Bonus Video Series: “5 Myths About Manifestation”</strong><br>
+            Short, sharp videos debunking the most harmful BS in the industry.
+          </p>
+        </article>
+
+        <!-- TIER 3 -->
+        <article class="glass-card bonus-card">
+          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 3 — Grand Prizes (Top 3)</h4>
+          <p class="system-desc" style="font-size:0.98rem;">
+            🏆 <strong>1st Place</strong><br>
+            • Option A: 3-month 1:1 coaching (6 × 60-minute sessions)<br>
+            • Option B: Founding member seat in future group programme<br>
+            • Signed first-edition copy + name in acknowledgements<br><br>
+
+            🥈 <strong>2nd Place</strong><br>
+            • Option A: 3 × 90-minute deep-dive sessions<br>
+            • Option B: Free access to the future 8-week group programme<br>
+            • Signed first-edition copy + all Tier 2 bonuses<br><br>
+
+            🥉 <strong>3rd Place</strong><br>
+            • 2 × 60-minute 1:1 sessions + personalised roadmap<br>
+            • Signed first-edition copy + all Tier 2 bonuses
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="section" id="final-cta" style="margin-top:-10rem;">
+
+    <div class="final-cta-inner" style="text-align:center; max-width:1400px; margin:0 auto;">
+        <h2 class="system-title" style="margin-bottom:1.4rem;">
+          Ready to finally break through?
+        </h2>
+
+        <p class="system-desc" style="margin-bottom:2.2rem;">
+          Join the waitlist to get early access to <strong>The Code of Reality</strong> and
+          launch-only bonuses reserved for early readers.
+        </p>
+
+        <!-- CTA BUTTON (40% WIDTH, CENTERED) -->
+        <a href="#waitlist"
+           style="
+             display:block;
+             width:40vw;
+             max-width:420px;
+             min-width:260px;
+             margin:0 auto;
+             padding:1rem 1rem;
+             border-radius:14px;
+             background:#020816;
+             color:#fff;
+             font-family:europa, Helvetica Neue, Helvetica, Arial, sans-serif;
+             font-weight:700;
+             letter-spacing:0.16em;
+             text-transform:uppercase;
+             font-size:0.78rem;
+             box-shadow:0 16px 40px rgba(15,23,42,0.4);
+             text-decoration:none;
+             transition:all .2s ease;
+           "
+           onmouseover="this.style.boxShadow='0 22px 55px rgba(15,23,42,0.48)'; this.style.transform='translateY(-1px)'"
+           onmouseout="this.style.boxShadow='0 16px 40px rgba(15,23,42,0.4)'; this.style.transform='translateY(0)'"
+        >
+          Join the waitlist
+        </a>
+
+        <!-- Sharing CTA -->
+        <p class="system-desc" style="margin-top:2.3rem; font-size:0.95rem;">
+          Share this page with friends for extra bonuses when the book launches—<br>
+          <strong>the more you share, the more you get.</strong>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 The Code of Reality. All rights reserved.</p>
-      <p>Early access landing page – book in development.</p>
+    <div class="footer-inner">
+      <div>© 2025–2035 Rita Anstey. All rights reserved.</div>
+      <div class="footer-links">
+        <!-- here you can later add Terms / Privacy / Support -->
+      </div>
     </div>
   </footer>
 </div>
-
 </body>
 </html>
