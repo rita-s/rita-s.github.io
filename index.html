@@ -21,26 +21,32 @@
 
           <form
                   class="hero-form"
+                  id="waitlist-form"
                   action="https://getlaunchlist.com/s/gDA8HJ"
                   method="POST"
+                  target="_blank"
           >
             <input
                     type="email"
                     name="email"
+                    id="waitlist-email"
                     required
                     placeholder="Enter your email"
             />
             <input
                     type="hidden"
                     name="redirect_url"
-                    value="https://twojastrona.pl/dziekujemy"
+                    value="https://ritaanstey.com"
             />
-            <button type="submit">Join waitlist</button>
+            <button type="submit" id="waitlist-button">Join waitlist</button>
           </form>
 
-          <p class="hero-note">
-            No payment. No spam. Unsubscribe anytime.<br /><br />
-            Join the waitlist, share with friends—exclusive launch bonuses and prizes for top 3!
+          <!-- SUCCESS LINE -->
+          <p class="hero-success" id="waitlist-success" style="display:none;">
+            ✓ Success! You're in.
+            <span class="hero-success-share">
+              Share with friends—exclusive launch bonuses and prizes for top 3!
+            </span>
           </p>
         </div>
 
@@ -101,7 +107,7 @@
 
           <!-- RIGHT: why this works -->
           <div>
-            <p class="eyebrow">Why this works</p>
+            <p class="eyebrow">Why listen to me</p>
             <h3 class="author-why-title">I spent 18 years testing every method so you don't have to</h3>
 
             <div class="author-text">
@@ -138,6 +144,7 @@
         </div>
       </div>
     </section>
+
     <!-- THE SYSTEM -->
     <section class="section" id="system">
       <div class="system-intro">
@@ -201,125 +208,270 @@
       </div>
     </section>
 
-    <!-- LAUNCH BONUSES (3 COLUMNS, FULL WIDTH LIKE SYSTEM) -->
-    <section class="section" id="launch-bonuses">
-      <div class="system-intro">
-        <p class="eyebrow">Launch bonuses</p>
-        <h2 class="system-title">Three levels of bonuses. One waitlist.</h2>
-        <p class="system-desc">
-          Everyone gets something. The more you share, the more you unlock.
-        </p>
-      </div>
+    <!-- LAUNCH BONUSES -->
+<!--    <section class="section" id="launch-bonuses">-->
+<!--      <div class="system-intro">-->
+<!--        <p class="eyebrow">Launch Bonuses</p>-->
+<!--        <h2 class="system-title">Three Tiers. Increasing Value. One Waitlist.</h2>-->
+<!--      </div>-->
 
-      <div class="bonuses-grid">
-        <!-- TIER 1 -->
-        <article class="glass-card bonus-card">
-          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 1 — All Subscribers</h4>
-          <p class="system-desc" style="font-size:0.98rem;">
-            ✓ <strong>30% Early Bird Discount</strong><br>
-            Book at launch price minus 30%. Valid for 48 hours after launch.<br><br>
+<!--      <div class="bonuses-grid">-->
+<!--        &lt;!&ndash; TIER 1 &ndash;&gt;-->
+<!--        <article class="glass-card bonus-card">-->
+<!--          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 1 — All Early Buyers</h4>-->
 
-            ✓ <strong>Chapter 1: “The Coherence Gap” (PDF)</strong><br>
-            Instant download so you can start reading right away.<br><br>
+<!--          <div class="system-desc bonus-content" style="font-size:0.98rem;">-->
+<!--            <em>First 500 copies at $17 (valid 72 hours)</em><br><br>-->
 
-            ✓ <strong>10-Minute “Coherence Reset” Audio Practice</strong><br>
-            Guided nervous system regulation you can use any time you feel blocked.<br><br>
+<!--            <strong>THE COMPLETE PACKAGE:</strong><br><br>-->
 
-            ✓ <strong>“18 Years in 18 Pages” Behind-the-Scenes PDF</strong><br>
-            Key insights from what worked, what didn’t and why.
-          </p>
-        </article>
+<!--            ✓ <strong>The Book — 3 Formats ($47 value)</strong><br>-->
+<!--            • PDF — Read on any device<br>-->
+<!--            • ePub — Kindle, Apple Books compatible<br>-->
+<!--            • Audiobook — Listen anywhere, professionally narrated<br><br>-->
 
-        <!-- TIER 2 -->
-        <article class="glass-card bonus-card">
-          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 2 — Top 10 Referrers</h4>
-          <p class="system-desc" style="font-size:0.98rem;">
-            Everything from Tier 1, plus:<br><br>
+<!--            ✓ <strong>3 Guided Audio Practices ($91 value)</strong><br>-->
+<!--            • 15-Minute Miracle — Trauma release + manifestation<br>-->
+<!--            • 10-Minute Coherence Reset — Nervous system regulation<br>-->
+<!--            • 5-Minute Daily Reset — Quick recalibration<br><br>-->
 
-            ✓ <strong>Extended Preview: Chapters 1–3</strong><br>
-            First ~60 pages, two weeks before public launch.<br><br>
+<!--            ✓ <strong>4 Bonus Guides (PDF, $108 value)</strong><br>-->
+<!--            • "Why Manifestation Fails" — 10-page deep dive<br>-->
+<!--            • "Identify Your Blocks" Assessment<br>-->
+<!--            • "First 48 Hours" Action Plan<br>-->
+<!--            • "5 Real Transformations" Case Studies<br><br>-->
 
-            ✓ <strong>“Coherence Mapping” Workbook (PDF)</strong><br>
-            Step-by-step framework to apply the 4 elements to your own life.<br><br>
+<!--            ✓ <strong>Private Launch Community</strong><br>-->
+<!--            Exclusive group for first 500 buyers<br><br>-->
 
-            ✓ <strong>Private Launch Week Q&amp;A (Live on Zoom)</strong><br>
-            90-minute small-group call. Live teaching + questions. Recording included.<br><br>
+<!--            ✓ <strong>10% Lifetime Discount Code</strong><br>-->
+<!--            Any future product in the store<br>-->
+<!--          </div>-->
 
-            ✓ <strong>Bonus Video Series: “5 Myths About Manifestation”</strong><br>
-            Short, sharp videos debunking the most harmful BS in the industry.
-          </p>
-        </article>
+<!--          <div class="system-desc bonus-footer" style="font-size:0.98rem;">-->
+<!--            <strong>TOTAL VALUE: $246 | YOU PAY: $17</strong>-->
+<!--            <strong style="color:#2B7ACF;">Save $229 (93% OFF)</strong>-->
+<!--          </div>-->
+<!--        </article>-->
 
-        <!-- TIER 3 -->
-        <article class="glass-card bonus-card">
-          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 3 — Grand Prizes (Top 3)</h4>
-          <p class="system-desc" style="font-size:0.98rem;">
-            🏆 <strong>1st Place</strong><br>
-            • Option A: 3-month 1:1 coaching (6 × 60-minute sessions)<br>
-            • Option B: Founding member seat in future group programme<br>
-            • Signed first-edition copy + name in acknowledgements<br><br>
+<!--        &lt;!&ndash; TIER 2 &ndash;&gt;-->
+<!--        <article class="glass-card bonus-card">-->
+<!--          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 2 — Waitlist Members</h4>-->
 
-            🥈 <strong>2nd Place</strong><br>
-            • Option A: 3 × 90-minute deep-dive sessions<br>
-            • Option B: Free access to the future 8-week group programme<br>
-            • Signed first-edition copy + all Tier 2 bonuses<br><br>
+<!--          <div class="system-desc bonus-content" style="font-size:0.98rem;">-->
+<!--            <em>Join before 20 December 2025</em><br><br>-->
 
-            🥉 <strong>3rd Place</strong><br>
-            • 2 × 60-minute 1:1 sessions + personalised roadmap<br>
-            • Signed first-edition copy + all Tier 2 bonuses
-          </p>
-        </article>
-      </div>
-    </section>
+<!--            Everything from Tier 1, <strong>plus:</strong><br><br>-->
+
+<!--            ✓ <strong>Price Lock Guarantee</strong><br>-->
+<!--            $17 early bird locked in forever<br><br>-->
+
+<!--            ✓ <strong>20% Off Future Course</strong><br>-->
+<!--            Save $100+ when 8-week program launches<br><br>-->
+
+<!--            ✓ <strong>"Founding Member" Badge</strong><br>-->
+<!--            Special status in community<br><br>-->
+
+<!--            ✓ <strong>Lifetime Book Updates</strong><br>-->
+<!--            All future editions free<br>-->
+<!--          </div>-->
+
+<!--          <div class="system-desc bonus-footer" style="font-size:0.98rem;">-->
+<!--            <strong>Additional Value: $127</strong>-->
+<!--            <strong>TOTAL: $373 value for $17</strong>-->
+<!--          </div>-->
+<!--        </article>-->
+
+<!--        &lt;!&ndash; TIER 3 &ndash;&gt;-->
+<!--        <article class="glass-card bonus-card">-->
+<!--          <h4 class="system-heading" style="margin-bottom:0.6rem;">Tier 3 — Top 10 Referrers</h4>-->
+
+<!--          <div class="system-desc bonus-content" style="font-size:0.98rem;">-->
+<!--            Everything from Tier 1 + 2, <strong>plus:</strong><br><br>-->
+
+<!--            ✓ <strong>50% Off Future Course (save $250+)</strong><br>-->
+<!--            Massive discount when program launches<br><br>-->
+
+<!--            ✓ <strong>Beta Tester Access — Free Course</strong><br>-->
+<!--            Help shape it, get it free before public launch<br><br>-->
+
+<!--            ✓ <strong>6 Weeks Personal Email Support</strong><br>-->
+<!--            2 emails/week answered directly by Rita<br><br>-->
+
+<!--            ✓ <strong>Featured Testimonial</strong><br>-->
+<!--            Your story on website + social media<br><br>-->
+
+<!--            ✓ <strong>Interview/Podcast Feature</strong><br>-->
+<!--            Share your transformation on Rita's platform<br>-->
+<!--          </div>-->
+
+<!--          <div class="system-desc bonus-footer" style="font-size:0.98rem;">-->
+<!--            <strong>Additional Value: $500+</strong>-->
+<!--            <strong>TOTAL: $873+ value</strong>-->
+<!--          </div>-->
+<!--        </article>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; GRAND PRIZES &ndash;&gt;-->
+<!--      <div class="system-intro" style="margin-top:4rem;">-->
+<!--        <p class="eyebrow">Grand Prizes</p>-->
+<!--        <h2 class="system-title">Top 3 Referrers</h2>-->
+<!--      </div>-->
+
+<!--      <div class="bonuses-grid">-->
+<!--        &lt;!&ndash; 1ST PLACE &ndash;&gt;-->
+<!--        <article class="glass-card bonus-card" style="border-top:3px solid #FFD700;">-->
+<!--          <h4 class="system-heading" style="margin-bottom:0.6rem;">🏆 1st Place</h4>-->
+
+<!--          <div class="system-desc bonus-content" style="font-size:0.98rem;">-->
+<!--            ✓ <strong>3 × 60-Minute Coaching Sessions ($897 value)</strong><br>-->
+<!--            Work directly with Rita on your blocks<br><br>-->
+
+<!--            ✓ <strong>Personalized Written Roadmap</strong><br>-->
+<!--            Custom plan for your exact situation<br><br>-->
+
+<!--            ✓ <strong>Name in Book Acknowledgements</strong><br>-->
+<!--            Forever part of the book<br><br>-->
+
+<!--            ✓ <strong>Free Access to Future Course ($497+ value)</strong><br>-->
+<!--            Beta test + keep forever<br><br>-->
+
+<!--            ✓ <strong>Co-Create Content</strong><br>-->
+<!--            Write guest post for Rita's blog<br>-->
+<!--            Your byline, your authority<br>-->
+<!--          </div>-->
+
+<!--          <div class="system-desc bonus-footer" style="font-size:0.98rem;">-->
+<!--            <strong>TOTAL VALUE: $1,500+</strong>-->
+<!--          </div>-->
+<!--        </article>-->
+
+<!--        &lt;!&ndash; 2ND PLACE &ndash;&gt;-->
+<!--        <article class="glass-card bonus-card" style="border-top:3px solid #C0C0C0;">-->
+<!--          <h4 class="system-heading" style="margin-bottom:0.6rem;">🥈 2nd Place</h4>-->
+
+<!--          <div class="system-desc bonus-content" style="font-size:0.98rem;">-->
+<!--            ✓ <strong>2 × 60-Minute Coaching Sessions ($597 value)</strong><br>-->
+<!--            Deep dive on your #1 block<br><br>-->
+
+<!--            ✓ <strong>Personalized Written Roadmap</strong><br><br>-->
+
+<!--            ✓ <strong>Name in Book Acknowledgements</strong><br><br>-->
+
+<!--            ✓ <strong>50% Off Future Course (save $250)</strong><br><br>-->
+
+<!--            ✓ <strong>Featured Testimonial</strong><br>-->
+<!--            Your story prominently featured<br>-->
+<!--          </div>-->
+
+<!--          <div class="system-desc bonus-footer" style="font-size:0.98rem;">-->
+<!--            <strong>TOTAL VALUE: $1,000+</strong>-->
+<!--          </div>-->
+<!--        </article>-->
+
+<!--        &lt;!&ndash; 3RD PLACE &ndash;&gt;-->
+<!--        <article class="glass-card bonus-card" style="border-top:3px solid #CD7F32;">-->
+<!--          <h4 class="system-heading" style="margin-bottom:0.6rem;">🥉 3rd Place</h4>-->
+
+<!--          <div class="system-desc bonus-content" style="font-size:0.98rem;">-->
+<!--            ✓ <strong>1 × 60-Minute Breakthrough Session ($297 value)</strong><br>-->
+<!--            Identify core block + action plan<br><br>-->
+
+<!--            ✓ <strong>Personalized Written Roadmap</strong><br><br>-->
+
+<!--            ✓ <strong>Name in Book Acknowledgements</strong><br><br>-->
+
+<!--            ✓ <strong>50% Off Future Course</strong><br><br>-->
+
+<!--            ✓ <strong>Guest Post Opportunity</strong><br>-->
+<!--            Build your authority on Rita's platform<br>-->
+<!--          </div>-->
+
+<!--          <div class="system-desc bonus-footer" style="font-size:0.98rem;">-->
+<!--            <strong>TOTAL VALUE: $700+</strong>-->
+<!--          </div>-->
+<!--        </article>-->
+<!--      </div>-->
+<!--    </section>-->
 
     <!-- FINAL CTA SECTION -->
-    <section class="section" id="final-cta" style="margin-top:-5rem;">
+    <section class="section" id="final-cta">
+      <div class="final-cta-inner">
+        <div class="final-cta-grid">
+          <!-- LEFT COLUMN -->
+          <div class="final-cta-left">
+            <p class="eyebrow">Waitlist</p>
 
-    <div class="final-cta-inner" style="text-align:center; max-width:1400px; margin:0 auto;">
-        <h2 class="system-title" style="margin-bottom:1.4rem;">
-          Ready to finally break through?
-        </h2>
+            <h2 class="system-title" style="margin-bottom:1.4rem;">
+              Ready to finally break through?
+            </h2>
 
-        <p class="system-desc" style="margin-bottom:2.2rem;">
-          Join the waitlist to get early access to <strong>The Code of Reality</strong> and
-          launch-only bonuses reserved for early readers.
-        </p>
+            <p class="system-desc" style="margin-bottom:2.2rem; max-width:40rem;">
+              Join the waitlist to get early access to <strong>The Code of Reality</strong> and
+              launch-only bonuses reserved for early readers.
+            </p>
 
-        <!-- CTA BUTTON (40% WIDTH, CENTERED) -->
-        <a href="#waitlist"
-           style="
-             display:block;
-             width:40vw;
-             max-width:420px;
-             min-width:260px;
-             margin:0 auto;
-             padding:1rem 1rem;
-             border-radius:14px;
-             background:#020816;
-             color:#fff;
-             font-family:europa, Helvetica Neue, Helvetica, Arial, sans-serif;
-             font-weight:700;
-             letter-spacing:0.16em;
-             text-transform:uppercase;
-             font-size:0.78rem;
-             box-shadow:0 16px 40px rgba(15,23,42,0.4);
-             text-decoration:none;
-             transition:all .2s ease;
-           "
-           onmouseover="this.style.boxShadow='0 22px 55px rgba(15,23,42,0.48)'; this.style.transform='translateY(-1px)'"
-           onmouseout="this.style.boxShadow='0 16px 40px rgba(15,23,42,0.4)'; this.style.transform='translateY(0)'"
-        >
-          Join the waitlist
-        </a>
+            <form
+                    class="hero-form hero-form--center"
+                    id="waitlist-form-bottom"
+                    action="https://getlaunchlist.com/s/gDA8HJ"
+                    method="POST"
+                    target="_blank"
+            >
+              <input
+                      type="email"
+                      name="email"
+                      id="waitlist-email-bottom"
+                      required
+                      placeholder="Enter your email"
+              />
+              <input
+                      type="hidden"
+                      name="redirect_url"
+                      value="https://ritaanstey.com"
+              />
+              <button type="submit" id="waitlist-button-bottom">Join waitlist</button>
+            </form>
 
-        <!-- Sharing CTA -->
-        <p class="system-desc" style="margin-top:2.3rem; font-size:0.95rem;">
-          Share this page with friends for extra bonuses when the book launches—<br>
-          <strong>the more you share, the more you get.</strong>
-        </p>
+            <p class="system-desc final-cta-share-text">
+              Share this page with friends for extra bonuses when the book launches—
+              <strong>the more you share, the more you get.</strong>
+              Please use your dedicated reference link— you will get this once you sign up
+              for the waitlist.
+            </p>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="final-cta-right">
+            <article class="final-cta-steps">
+              <h4 class="final-cta-steps-title eyebrow">
+                What happens after you join
+              </h4>
+
+              <ol class="final-cta-steps-list">
+                <li>
+                  <strong>📩 Check your inbox.</strong> You’ll get a short confirmation email from me.
+                </li>
+                <li>
+                  <strong>🔗 Save your personal link.</strong> Your dedicated reference link is
+                  inside that email – that’s how the system tracks your bonuses.
+                </li>
+                <li>
+                  <strong>🕊️ Share with as many friends as possible.</strong>
+                  Use different platforms. Every time someone signs up using your link, you earn points.
+                  Winners will be officially announced.
+                </li>
+              </ol>
+
+              <p class="final-cta-steps-note">
+                No extra accounts, no community to join, no spam. Just a waitlist that
+                respects your time and attention.
+              </p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
@@ -327,10 +479,104 @@
     <div class="footer-inner">
       <div>© 2025–2035 Rita Anstey. All rights reserved.</div>
       <div class="footer-links">
-        <!-- here you can later add Terms / Privacy / Support -->
+        <!-- Terms / Privacy / Support later -->
       </div>
     </div>
   </footer>
 </div>
+
+<script>
+  (function () {
+    var sets = [];
+
+    function addSet(formId, emailId, buttonId) {
+      var form = document.getElementById(formId);
+      var email = document.getElementById(emailId);
+      var button = document.getElementById(buttonId);
+      if (form && email && button) {
+        sets.push({ form: form, email: email, button: button });
+      }
+    }
+
+    // HERO (top)
+    addSet('waitlist-form', 'waitlist-email', 'waitlist-button');
+    // FINAL CTA (bottom)
+    addSet('waitlist-form-bottom', 'waitlist-email-bottom', 'waitlist-button-bottom');
+
+    var successMsg = document.getElementById('waitlist-success');
+
+    if (!sets.length) return;
+
+    function markSubmitted(email) {
+      sets.forEach(function (s) {
+        if (email && !s.email.value) {
+          s.email.value = email;
+        }
+        s.email.disabled = true;
+        s.button.disabled = true;
+        s.button.textContent = "You're in!";
+        s.button.style.backgroundColor = '#2B7ACF';
+      });
+      if (successMsg) successMsg.style.display = 'block';
+    }
+
+    try {
+      if (localStorage.getItem('waitlistSubmitted') === 'true') {
+        markSubmitted(localStorage.getItem('waitlistEmail') || '');
+      }
+    } catch (e) {}
+
+    sets.forEach(function (s) {
+      s.form.addEventListener('submit', function (e) {
+        var email = s.email.value.trim();
+        if (!email) return;
+
+        markSubmitted(email);
+        try {
+          localStorage.setItem('waitlistSubmitted', 'true');
+          localStorage.setItem('waitlistEmail', email);
+        } catch (e) {}
+
+        var popup = null;
+        try {
+          popup = window.open('', '_blank');
+        } catch (err) {
+          popup = null;
+        }
+
+        if (popup) {
+          e.preventDefault();
+
+          var winName = 'waitlist_' + Date.now();
+          popup.name = winName;
+
+          var tempForm = document.createElement('form');
+          tempForm.method = 'POST';
+          tempForm.action = s.form.action;
+          tempForm.target = winName;
+
+          var emailField = document.createElement('input');
+          emailField.type = 'hidden';
+          emailField.name = 'email';
+          emailField.value = email;
+          tempForm.appendChild(emailField);
+
+          var redirectInput = s.form.querySelector('input[name="redirect_url"]');
+          if (redirectInput) {
+            var redirectField = document.createElement('input');
+            redirectField.type = 'hidden';
+            redirectField.name = 'redirect_url';
+            redirectField.value = redirectInput.value;
+            tempForm.appendChild(redirectField);
+          }
+
+          document.body.appendChild(tempForm);
+          tempForm.submit();
+          document.body.removeChild(tempForm);
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>
