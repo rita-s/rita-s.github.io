@@ -54,6 +54,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding: 5rem 0;
 }
 
 .hero-inner {
@@ -225,18 +226,24 @@ body {
     }
 }
 
-/* ================== AUTHOR (GLASS) ================== */
+/* ================== SEKCJE ================== */
 
 .section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5rem 0;
 }
 
-/* oddech między sekcjami */
+/* brak dodatkowego odstępu między sekcjami */
 .section + .section {
-    margin-top: 3rem;
+    margin-top: 0;
+}
+
+/* Final CTA nie centrowane pionowo */
+#final-cta.section {
+    justify-content: flex-start;
 }
 
 .section-header {
@@ -244,7 +251,7 @@ body {
 }
 
 .eyebrow {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     letter-spacing: 0.24em;
     text-transform: uppercase;
     color: #6b7280;
@@ -258,6 +265,8 @@ body {
     font-weight: 800;
     font-family: europa, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+/* ================== GLASS CARD / AUTHOR ================== */
 
 .glass-card {
     position: relative;
@@ -330,10 +339,10 @@ body {
 /* ===== BIG HARV EKER IMAGE + CAPTION ===== */
 
 .author-side-block {
-    float: left;
+    float: right;
     width: auto;
     max-width: 380px;
-    margin: 0 2rem 2rem 0;
+    margin: 0 0 2rem 2rem;
 }
 
 .author-side-image--large {
@@ -416,6 +425,50 @@ body {
     line-height: 1.9;
 }
 
+/* ================= LAUNCH BONUSES GRID ================= */
+
+.bonuses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bonus-card {
+    width: 100%;
+}
+
+
+
+
+/* 2 kolumny na tabletach */
+@media (min-width: 768px) {
+    .bonuses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 3 kolumny w jednym rzędzie na desktopie */
+@media (min-width: 1100px) {
+    .bonuses-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1020px) {
+    .bonuses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px) {
+    .bonuses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ================= FOOTER ================= */
 
 .footer {
@@ -464,7 +517,7 @@ body {
     color: #111827;
 }
 
-/* =============== RESPONSIVE =============== */
+/* =============== RESPONSIVE ================= */
 
 @media (max-width: 1200px) {
     .page {
@@ -539,49 +592,121 @@ body {
     }
 }
 
-.bonuses-grid {
+/* ================= SUCCESS LINE ================= */
+
+.hero-success {
+    font-size: 0.8rem;
+    font-family: europa, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #16a34a;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.hero-success-share {
+    color: #4b5563;
+    font-weight: 400;
+}
+
+/* ================= FINAL CTA ================= */
+
+/* kontener sekcji – pełna szerokość, wyrównanie do siatki strony */
+.final-cta-inner {
+    width: 100%;
+}
+
+/* DOKŁADNIE 50% / 50% */
+.final-cta-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    width: 100%;
-    max-width: 1400px;   /* TAKA SAMA SZEROKOŚĆ JAK CAŁA STRONA */
-    margin: 0 auto;
-}
-
-.bonus-card {
+    grid-template-columns: 1fr 1fr;  /* lewa 50%, prawa 50% */
+    gap: 3.2rem;
+    align-items: flex-start;
     width: 100%;
 }
 
-
-
-/* 2 kolumny na tabletach */
-@media (min-width: 768px) {
-    .bonuses-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+/* lewa kolumna – tekst + formularz */
+.final-cta-left {
+    text-align: left;
 }
 
-/* 3 kolumny w JEDNYM rzędzie na desktopie */
-@media (min-width: 1100px) {
-    .bonuses-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+/* tekst pod formularzem */
+.final-cta-share-text {
+    font-size: 0.95rem;
+    margin-top: 1.4rem;
 }
 
-@media (max-width: 1020px) {
-    .bonuses-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* formularz w finale – lewo, jak w hero */
+#final-cta .hero-form--center {
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.8rem;
 }
 
-@media (max-width: 680px) {
-    .bonuses-grid {
+/* prawa kolumna – dopychamy kartę do prawej krawędzi */
+.final-cta-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* BOX po prawej */
+.final-cta-steps {
+    padding: 2.4rem 2.6rem 2.6rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.05),
+            0 8px 20px rgba(0, 0, 0, 0.03);
+    max-width: 620px;
+    width: 100%;
+}
+
+/* tytuł w stylu eyebrow */
+.final-cta-steps-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: europa, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+/* lista kroków */
+.final-cta-steps-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-family: "minion-pro", "Minion Pro", Georgia, "Times New Roman", serif;
+    font-size: 0.98rem;
+    line-height: 1.85;
+    color: var(--text-muted);
+}
+
+.final-cta-steps-list li + li {
+    margin-top: 0.35rem;
+}
+
+/* notka pod listą */
+.final-cta-steps-note {
+    margin-top: 1.2rem;
+    font-family: "minion-pro", "Minion Pro", Georgia, "Times New Roman", serif;
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* mobile – jedna kolumna */
+@media (max-width: 899px) {
+    .final-cta-grid {
         grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+
+    .final-cta-right {
+        justify-content: flex-start;
+    }
+
+    .final-cta-steps {
+        max-width: 100%;
     }
 }
-
-#final-cta.section {
-    margin-top: -5rem !important;
-}
-
-
