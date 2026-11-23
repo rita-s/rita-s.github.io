@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+*.iml
+.vscode/
+.ipynb_checkpoints/
+__pycache__/
+out/
+.env
